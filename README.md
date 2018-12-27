@@ -1,7 +1,21 @@
 ### Competitive-Helper
 Various utilities to help with competitive programming/math. Including, solving recurrences,    
-from here: https://github.com/lion137/Linear_Recurrence_Solver.     
+from here: https://github.com/lion137/Linear_Recurrence_Solver.      
+Before starts, run prime sieve to 10 milions - to reasonably fast factorize numbers up to ```10^16```.            
+Functions:
+- ```is_prime```;    
+- ```divisors(n)``` - all divisors of ```n```;    
+-  ```primes(n)``` - primes up to ```n```;    
+- ```factorize(n)``` - factors of ```n```;     
+- ```distinct_factors(n)```;     
+- ```totient(n)``` - Eulers Totient function;     
+- ```ndivisors(n)``` - number of divisors of ```n```;     
+- ```sdivisors(n)``` - sum of proper divisors;    
+- ```lcm(n, m)``` - Least Common Multiple of ```n```, ```m```;     
+- ```recurrence(n, vec, vec1)``` - solves recurrence: https://github.com/lion137/Linear_Recurrence_Solver;     
+- ```recurrence_mod(n, vec, vec1, mod)``` - solves recurrence modulo;     
+- ```pow_mod(a, n, m)``` - power of ```a``` to ```n``` modulo ```m```.     
 Usage(asciinema cast):      
-<a href="https://asciinema.org/a/218691" target="_blank"><img src="https://asciinema.org/a/218691.svg" /></a>
+
 
 
