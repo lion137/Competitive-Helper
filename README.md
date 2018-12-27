@@ -16,7 +16,7 @@ Functions:
 - ```recurrence(n, vec, vec1)``` - solves recurrence: https://github.com/lion137/Linear_Recurrence_Solver;     
 - ```recurrence_mod(n, vec, vec1, mod)``` - solves recurrence modulo;     
 - ```pow_mod(a, n, m)``` - power of ```a``` to ```n``` modulo ```m```.    
-Any suggestions, bugs, comment here or on: https://lion137.blogspot.com/2018/12/competitive-math-helper.html
+Any suggestions, bugs, comment here or on: https://lion137.blogspot.com/2018/12/competitive-math-helper.html     
 Could be use directly in code or as a quick check in console:    
 <a href="https://asciinema.org/a/218695" target="_blank"><img src="https://asciinema.org/a/218695.svg" /></a>
 
