@@ -1,5 +1,4 @@
 # Module with various utilities to competitive mathematics/programming.
-# copyleft 2018 lion137
 # Sources: P. Norvig: Pytudes, Stackoverflow, Wikipedia
 # http://en.literateprograms.org/Miller-Rabin_primality_test_(Python).
 
@@ -251,7 +250,6 @@ def miller_rabin_pass(a, s, d, n): # is_prime helper
 
 
 def sieve(n):
-	"""Create an iterable generator of primes, with initial cache of all primes <= n."""
 	N = n // 2 
 	_sieve = [True] * N
 	for i in range(3, sqrt_int(n) + 1, 2):
@@ -272,7 +270,7 @@ milion = 1000000
 prime_nums = sieve(10 * milion)
 
 def factorize(n):
-	"""Prime factorization of 1 < n < 10^12"""
+	"""Prime factorization of 1 < n < 10^16"""
 	result = []
 	if n >= 2 * milion:
 		for p in prime_nums[0]:
