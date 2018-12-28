@@ -9,7 +9,7 @@ import random
 from functools import reduce
 from fractions import Fraction
 from collections import Counter
-from itertools import combinations_with_replacement, repeat
+from itertools import repeat, product
 from math import log, pow, gcd
 
 
@@ -307,9 +307,7 @@ def divisors(n):
 	if n == 1: return 1
 	factors = list(distinct_factors(n))
 	length = int(log(n, min(factors))) + 1
-	c_tail = list(combinations_with_replacement(list(range(length, -1, -1)), len(factors)))
-	comb = list(combinations_with_replacement(list(range(length + 1)), len(factors))) + c_tail
-	#print(comb)
+	comb = [item for item in product(list(range(length + 1)), repeat=len(factors))]
 	result = []
 	for e in comb:
 		tmp = []

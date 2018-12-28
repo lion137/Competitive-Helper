@@ -1,13 +1,6 @@
 # tests
 
-
-import sys
-sys.path.append(".")
-
 from algorithm import *
-#from classes import *
-#from functions import *
-#from itertools import combinations_with_replacement
 
 
 def tests():
@@ -187,7 +180,7 @@ def tests():
 	print ("Test Number Of Divisors")
 	assert ndivisors(12) == 6
 	assert ndivisors(7) == 2
-	#print(list(combinations_with_replacement(list(range(6)), 3)))
+
 	
 	print("Test Divisors")
 	assert divisors(1) == 1
@@ -203,11 +196,12 @@ def tests():
 	assert sdivisors(12) == 16
 	assert sdivisors(137) == 1
 	assert sdivisors(100) == 117
+	assert sdivisors(284) == 220
+	assert sdivisors(220) == 284
 	
 	print ("Test of Least Common Multiple lcm")
 	assert lcm(21, 6) == 42
 	assert lcm(3, 3) == 3
-	
 	
 	
 	
