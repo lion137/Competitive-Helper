@@ -16,8 +16,8 @@ Functions:
 - ```recurrence(n, vec, vec1)``` - solves recurrence: https://github.com/lion137/Linear_Recurrence_Solver;     
 - ```recurrence_mod(n, vec, vec1, mod)``` - solves recurrence modulo;     
 - ```pow_mod(a, n, m)``` - power of ```a``` to ```n``` modulo ```m```.      
-- ```reduce_series(op, f, start, end, e=None)``` - applies an op to the series f, from start to the end exclusive, read the docs for more. Ex:    
-  ```reduce_series(add, lambda x: 1 / n, 1, 5) = 2.083333333333333``` - Harmonic series: https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)     
+- ```reduce_series(op, f, start, end, e=None)``` - applies an op to the series f, from start to the end exclusive, read the docs for more.     
+Ex:    ```reduce_series(add, lambda x: 1 / n, 1, 5) = 2.083333333333333``` - Harmonic series: https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)     
      
 One can, also, rise a matrix to some power ```n >= 0``` .     
 Any suggestions, bugs, comment here or on: https://lion137.blogspot.com/2018/12/competitive-math-helper.html     
