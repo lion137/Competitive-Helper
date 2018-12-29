@@ -203,8 +203,10 @@ def tests():
 	assert lcm(21, 6) == 42
 	assert lcm(3, 3) == 3
 	
+	print("Test Reduce Series")
+	assert reduce_series(add, lambda x: x ** 2, 1, 3) == 5
 	
-	
+			
 tests()
 
 

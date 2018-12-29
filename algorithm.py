@@ -3,7 +3,7 @@
 # http://en.literateprograms.org/Miller-Rabin_primality_test_(Python).
 
 
-from operator import mul
+from operator import *
 import random
 from functools import reduce
 from fractions import Fraction
@@ -115,6 +115,16 @@ def half(a):
 	if isinstance(a, complex): return a / 2
 	if isinstance(a, int): return a >> 1
 
+def neutral(op):
+	"""
+	Returns neutral element of the given operation
+	"""
+	if op == mul: return 1
+	if op == add: return 0
+	if op == floordiv: return 1
+	if op == sub: return 0
+	if op == truediv: return 1
+
 def mod_mul(a, b, m):
 	if isinstance(a, int): return ( (a % m) * (b % m)) % m
 	if isinstance(a, Matrix): return a.mod_mul_mat(b, m)
@@ -153,7 +163,9 @@ def mult(nums):
 		result *= n
 	return result
 
-# Functions
+####   Functions: #######
+
+# General, recurrences:
 
 def power(x, n, f=mul):
 	"""Takes regular type, x (square matrix, number or complex)
@@ -289,7 +301,7 @@ def factorize(n):
 	return result
 
 def distinct_factors(n):
-	return set(factorize(n))
+	return list(set(factorize(n)))
 
 def totient(n):
 	"""Eulers Totient function: https://en.wikipedia.org/wiki/Euler's_totient_function"""
@@ -327,3 +339,21 @@ def sdivisors(n):
 def lcm(a, b):
 	"""Least Common Multiple of a, b"""
 	return abs(a * b) // gcd(a, b)
+
+# Numerical
+
+def reduce_series(op, f, start, end, e=None):
+	
+	"""
+	op applied to f from start to end (excusive)
+	if op different than +, -, *, /, //, [add, sub, mul, truediv, floordiv] 
+	in numbers, e (neutral element) must be supplied
+	"""
+	
+	n = start
+	if e: s = e 
+	else: s = neutral(op)
+	while n < end:
+		s = op(s, f(n))
+		n += 1
+	return s
